@@ -22,7 +22,7 @@ app.get('/libros/:id', async(req, res) => {
     try {
         const id = req.params.id;
         console.log(id);
-        const libroId = getlibroById(id);
+        const libroId = await getlibroById(id);
         return res.json(libroId);
     } catch (e) {
         console.log(e);
